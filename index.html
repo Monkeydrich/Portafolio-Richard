@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio de Richard Palma</title>
+  <meta
+    name="description"
+    content="Portafolio personal de Richard Palma, desarrollador con experiencia en desarrollo web, bases de datos, software y soporte técnico."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="main-nav" aria-label="Navegación principal">
+    <button class="nav-btn active" data-section="sobre-mi" type="button">Sobre mí</button>
+    <button class="nav-btn" data-section="proyectos" type="button">Proyectos</button>
+    <button class="nav-btn" data-section="contacto" type="button">Contacto</button>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-orb orb-1"></div>
+    <div class="hero-orb orb-2"></div>
+
+    <div class="hero-content">
+      <span class="hero-badge">PORTAFOLIO / DESARROLLO / TECNOLOGÍA</span>
+      <h1>Richard Palma</h1>
+      <p class="hero-description">
+        Desarrollador con enfoque en software, aplicaciones web, bases de datos y soporte técnico.
+      </p>
+
+      <div class="sub-header">
+        <p>Construyendo proyectos reales, aprendiendo siempre y mejorando en cada etapa.</p>
+      </div>
+
+      <div class="hero-actions">
+        <button class="hero-btn primary nav-btn" data-section="proyectos" type="button">Ver proyectos</button>
+        <button class="hero-btn secondary nav-btn" data-section="contacto" type="button">Contacto</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="sobre-mi" class="content-section active" aria-labelledby="titulo-sobre-mi">
+      <h2 id="titulo-sobre-mi">Sobre mí</h2>
+
+      <div class="info-grid">
+        <article class="info-card">
+          <span class="card-label">Perfil</span>
+          <p>
+            Hola, soy <strong>Richard Palma</strong>. Tengo experiencia en
+            <strong>C, C++, C#, HTML, CSS, JavaScript básico, Python básico, SQL y soporte técnico</strong>.
+            Me apasiona desarrollar proyectos prácticos, resolver problemas reales y seguir creciendo como profesional.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <span class="card-label">Datos</span>
+          <ul class="clean-list">
+            <li><strong>Edad:</strong> 20 años</li>
+            <li><strong>Cumpleaños:</strong> 27/04</li>
+            <li><strong>Ubicación:</strong> Ciudad de México</li>
+            <li><strong>Enfoque:</strong> Desarrollo web, software y soporte técnico</li>
+          </ul>
+        </article>
+
+        <article class="info-card full">
+          <span class="card-label">Educación</span>
+          <ul class="timeline">
+            <li>
+              <strong>CECyT 13 "Ricardo Flores Magón"</strong><br />
+              Técnico en Informática (2020 - 2023)
+            </li>
+            <li>
+              <strong>ESIME Culhuacán - IPN</strong><br />
+              Ingeniería en Computación (2023 - Actualidad)
+            </li>
+          </ul>
+        </article>
+
+        <article class="info-card full">
+          <span class="card-label">Tecnologías</span>
+          <div class="skills-grid">
+            <span>C</span>
+            <span>C++</span>
+            <span>C#</span>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Python</span>
+            <span>SQL</span>
+            <span>SQL Server</span>
+            <span>Soporte técnico</span>
+            <span>POO</span>
+            <span>ASP.NET MVC</span>
+            <span>ASP.NET Core MVC</span>
+            <span>Azure Web Services</span>
+            <span>Stripe & Stripe Connect</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="proyectos" class="content-section" aria-labelledby="titulo-proyectos">
+      <h2 id="titulo-proyectos">Proyectos</h2>
+
+      <div class="proyectos-grid">
+        <article class="proyecto">
+          <div class="project-top">
+            <span class="project-tag">Proyecto profesional / Web</span>
+            <h3>Tours Maran</h3>
+          </div>
+          <p>
+            Sitio web profesional para agencia de viajes, enfocado en presencia digital,
+            presentación de servicios y experiencia de usuario.
+          </p>
+          <p>
+            <strong>Mi participación:</strong> desarrollo del sitio, estructura de páginas,
+            interfaz visual, adaptación de contenido y mejora de la experiencia del usuario.
+          </p>
+          <p>
+            <strong>Tecnologías:</strong> HTML, CSS, JavaScript, C#, ASP.NET MVC, SQL Server y Azure.
+          </p>
+          <p>
+            <strong>Código:</strong> Privado.
+          </p>
+          <a href="https://toursmaran.com.mx" target="_blank" rel="noopener noreferrer">
+            Visitar sitio
+          </a>
+        </article>
+
+        <article class="proyecto">
+          <div class="project-top">
+            <span class="project-tag">Proyecto profesional / Plataforma web</span>
+            <h3>Resultados Precisos</h3>
+          </div>
+          <p>
+            Plataforma web orientada a la gestión de eventos deportivos, inscripciones,
+            administración de participantes y operación general del sistema.
+          </p>
+          <p>
+            <strong>Mi participación:</strong> desarrollo de módulos clave del sistema,
+            estructura de base de datos, vistas administrativas, lógica de negocio,
+            flujos de registro y despliegue de funcionalidades web.
+          </p>
+          <p>
+            <strong>Tecnologías:</strong> ASP.NET Core MVC, C#, SQL Server, HTML, CSS,
+            JavaScript, Azure y Stripe.
+          </p>
+          <p>
+            <strong>Código:</strong> Privado.
+          </p>
+          <a href="https://resultadosprecisos.com" target="_blank" rel="noopener noreferrer">
+            Visitar sitio
+          </a>
+        </article>
+
+        <article class="proyecto">
+          <div class="project-top">
+            <span class="project-tag">HTML / CSS / JS</span>
+            <h3>Portafolio web personal</h3>
+          </div>
+          <p>
+            Sitio personal enfocado en presentar perfil, habilidades, proyectos y medios de contacto.
+          </p>
+          <p>
+            <strong>Mi participación:</strong> diseño y desarrollo de la interfaz, estructura visual
+            y organización del contenido del portafolio.
+          </p>
+          <p>
+            <strong>Tecnologías:</strong> HTML, CSS y JavaScript.
+          </p>
+          <a href="https://github.com/Monkeydrich/Repositorio-Portafolio" target="_blank" rel="noopener noreferrer">
+            Ver en GitHub
+          </a>
+        </article>
+
+        <article class="proyecto">
+          <div class="project-top">
+            <span class="project-tag">C++ / POO</span>
+            <h3>Agencia de viajes</h3>
+          </div>
+          <p>
+            Proyecto orientado a objetos en C++ para modelar una agencia de viajes y sus operaciones.
+          </p>
+          <p>
+            <strong>Mi participación:</strong> desarrollo de lógica orientada a objetos,
+            estructura del sistema y organización de entidades del proyecto.
+          </p>
+          <p>
+            <strong>Tecnologías:</strong> C++ y Programación Orientada a Objetos.
+          </p>
+          <a href="https://github.com/Monkeydrich/Agencia-de-viajes-POO-" target="_blank" rel="noopener noreferrer">
+            Ver en GitHub
+          </a>
+        </article>
+
+        <article class="proyecto">
+          <div class="project-top">
+            <span class="project-tag">C# / MVC / SQL Server</span>
+            <h3>Aplicación web CRUD</h3>
+          </div>
+          <p>
+            Maqueta de sistema web para gestión de productos con operaciones CRUD y base de datos.
+          </p>
+          <p>
+            <strong>Mi participación:</strong> desarrollo de la maqueta, estructura MVC,
+            pantallas principales y conexión con base de datos.
+          </p>
+          <p>
+            <strong>Tecnologías:</strong> C#, ASP.NET MVC y SQL Server.
+          </p>
+          <a href="https://github.com/Monkeydrich/Maqueta-de-p-gina-web" target="_blank" rel="noopener noreferrer">
+            Ver en GitHub
+          </a>
+        </article>
+      </div>
+
+      <article class="info-card full project-note">
+        <span class="card-label">Nota</span>
+        <p>
+          Algunos proyectos mostrados corresponden a desarrollos reales implementados para empresas,
+          por lo que su código fuente no es público. Se presentan como evidencia de experiencia profesional,
+          mostrando el tipo de sistema, mi participación directa y las tecnologías utilizadas.
+        </p>
+      </article>
+    </section>
+
+    <section id="contacto" class="content-section" aria-labelledby="titulo-contacto">
+      <h2 id="titulo-contacto">Contacto</h2>
+
+      <div class="contacto-wrapper">
+        <div class="contacto-foto">
+          <img src="foto-rich.jpg" alt="Foto de Richard Palma" />
+        </div>
+
+        <div class="contacto-info">
+          <div class="contact-card">
+            <span class="card-label">Correo</span>
+            <p>
+              <a href="mailto:richardpalma102005@gmail.com">richardpalma102005@gmail.com</a>
+            </p>
+          </div>
+
+          <div class="contact-card">
+            <span class="card-label">Teléfono</span>
+            <p>
+              <a href="tel:+525572368152">+52 55 7236 8152</a>
+            </p>
+          </div>
+
+          <div class="contact-card">
+            <span class="card-label">GitHub</span>
+            <p>
+              <a href="https://github.com/Monkeydrich" target="_blank" rel="noopener noreferrer">
+                github.com/Monkeydrich
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Richard Palma · Portafolio personal</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
