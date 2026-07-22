@@ -1,4 +1,11 @@
+/* ============================================================
+   PORTAFOLIO — RICHARD PALMA
+   Sistema de diseño: tinta profunda + ámbar, tipografía
+   Bricolage Grotesque (display) / Plus Jakarta Sans (texto)
+   / JetBrains Mono (datos y etiquetas).
+   ============================================================ */
 
+/* ---------- 1. Tokens ---------- */
 :root {
   /* Color */
   --ink: #070b14;            /* fondo base (azul-negro, no negro puro) */
@@ -163,10 +170,18 @@ a {
 }
 
 .nav.scrolled {
-  background: rgba(7, 11, 20, 0.82);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background: rgba(7, 11, 20, 0.97);
   border-bottom-color: var(--line);
+}
+
+/* Vidrio esmerilado solo como mejora progresiva: si el navegador
+   no lo soporta, la barra queda casi sólida y siempre legible */
+@supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .nav.scrolled {
+    background: rgba(7, 11, 20, 0.8);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
 }
 
 .nav-inner {
@@ -905,33 +920,45 @@ body.nav-open .nav-toggle span:nth-child(2) {
     display: flex;
   }
 
-  /* Menú móvil: panel a pantalla completa */
+  /* Menú móvil: panel a pantalla completa.
+     Importante: va con position:absolute anclado a la barra, NO fixed.
+     Un ancestro con backdrop-filter (la barra al scrollear) se vuelve
+     el "containing block" de los descendientes fixed y colapsa el panel
+     a altura cero: los links se ven, pero el fondo no pinta nada. */
   .nav-links {
-    position: fixed;
-    inset: var(--nav-h) 0 0 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: calc(100vh - var(--nav-h));
+    height: calc(100dvh - var(--nav-h));
+    overflow-y: auto;
     flex-direction: column;
     align-items: stretch;
     justify-content: flex-start;
     gap: 8px;
-    padding: 28px 24px;
-    background: rgba(7, 11, 20, 0.97);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    padding: 28px 24px 48px;
+    /* Fondo totalmente sólido: la legibilidad nunca debe
+       depender de que backdrop-filter exista en el dispositivo */
+    background: var(--ink);
     border-top: 1px solid var(--line);
     opacity: 0;
+    visibility: hidden;
     transform: translateY(-10px);
     pointer-events: none;
-    transition: opacity 0.3s var(--ease), transform 0.3s var(--ease);
+    transition: opacity 0.3s var(--ease), transform 0.3s var(--ease),
+      visibility 0.3s var(--ease);
   }
 
   body.nav-open .nav-links {
     opacity: 1;
+    visibility: visible;
     transform: translateY(0);
     pointer-events: auto;
   }
 
   body.nav-open .nav {
-    background: rgba(7, 11, 20, 0.97);
+    background: var(--ink);
     border-bottom-color: var(--line);
   }
 
