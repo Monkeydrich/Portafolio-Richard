@@ -3,319 +3,415 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portafolio de Richard Palma</title>
+
+  <!-- ===== SEO básico ===== -->
+  <title>Richard Palma — Desarrollador Full Stack | Portafolio</title>
   <meta
     name="description"
-    content="Portafolio personal de Richard Palma, desarrollador con experiencia en desarrollo web, bases de datos, software y soporte técnico."
+    content="Portafolio de Richard Palma, desarrollador full stack en Ciudad de México. Node.js, Angular, C#/.NET, SQL Server y Azure. Sistemas reales en producción."
   />
+  <meta name="author" content="Richard Palma" />
+  <meta name="theme-color" content="#070b14" />
+  <link rel="canonical" href="https://monkeydrich.github.io/Portafolio-Richard/" />
 
+  <!-- ===== Open Graph / redes sociales ===== -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Richard Palma — Desarrollador Full Stack" />
+  <meta property="og:description" content="Construyo software que llega a producción. Node.js, Angular, C#/.NET, SQL Server y Azure." />
+  <meta property="og:url" content="https://monkeydrich.github.io/Portafolio-Richard/" />
+  <meta property="og:locale" content="es_MX" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Richard Palma — Desarrollador Full Stack" />
+  <meta name="twitter:description" content="Construyo software que llega a producción. Node.js, Angular, C#/.NET, SQL Server y Azure." />
+
+  <!-- ===== Favicon (SVG inline, sin archivo extra) ===== -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23070b14'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='28' fill='%23ffb454' text-anchor='middle'%3Erp%3C/text%3E%3C/svg%3E" />
+
+  <!-- ===== Tipografías ===== -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:ital,wght@0,400;0,500;1,400&display=swap"
     rel="stylesheet"
   />
 
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- ===== Datos estructurados (Google) ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Richard Palma",
+    "jobTitle": "Desarrollador Full Stack",
+    "email": "mailto:richardpalma102005@gmail.com",
+    "telephone": "+52 55 7236 8152",
+    "url": "https://monkeydrich.github.io/Portafolio-Richard/",
+    "sameAs": ["https://github.com/Monkeydrich"],
+    "address": { "@type": "PostalAddress", "addressLocality": "Ciudad de México", "addressCountry": "MX" },
+    "alumniOf": [
+      { "@type": "EducationalOrganization", "name": "ESIME Culhuacán — Instituto Politécnico Nacional" },
+      { "@type": "EducationalOrganization", "name": "CECyT 13 \"Ricardo Flores Magón\"" }
+    ],
+    "knowsAbout": ["Node.js", "Angular", "C#", "ASP.NET Core", "SQL Server", "Azure", "JavaScript", "Python", "C++"]
+  }
+  </script>
 </head>
+
 <body>
-  <nav class="main-nav" aria-label="Navegación principal">
-    <button class="nav-btn active" data-section="sobre-mi" type="button">Sobre mí</button>
-    <button class="nav-btn" data-section="proyectos" type="button">Proyectos</button>
-    <button class="nav-btn" data-section="contacto" type="button">Contacto</button>
-  </nav>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-  <header class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-orb orb-1"></div>
-    <div class="hero-orb orb-2"></div>
+  <!-- ================= NAV ================= -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#inicio" aria-label="Inicio — Richard Palma">
+        <span class="brand-prompt">~/</span>richard-palma
+      </a>
 
-    <div class="hero-content">
-      <span class="hero-badge">PORTAFOLIO / DESARROLLO / TECNOLOGÍA</span>
-      <h1>Richard Palma</h1>
-      <p class="hero-description">
-        Desarrollador con enfoque en software, aplicaciones web, bases de datos y soporte técnico.
-      </p>
+      <nav class="nav-links" id="nav-links" aria-label="Navegación principal">
+        <a href="#sobre-mi" class="nav-link">Sobre mí</a>
+        <a href="#tecnologias" class="nav-link">Tecnologías</a>
+        <a href="#proyectos" class="nav-link">Proyectos</a>
+        <a href="#contacto" class="nav-link">Contacto</a>
+        <a href="mailto:richardpalma102005@gmail.com" class="nav-cta">Hablemos</a>
+      </nav>
 
-      <div class="sub-header">
-        <p>Construyendo proyectos reales, aprendiendo siempre y mejorando en cada etapa.</p>
-      </div>
-
-      <div class="hero-actions">
-        <button class="hero-btn primary nav-btn" data-section="proyectos" type="button">Ver proyectos</button>
-        <button class="hero-btn secondary nav-btn" data-section="contacto" type="button">Contacto</button>
-      </div>
+      <button class="nav-toggle" id="nav-toggle" type="button"
+              aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menú">
+        <span></span><span></span>
+      </button>
     </div>
   </header>
 
-  <main class="container">
-    <section id="sobre-mi" class="content-section active" aria-labelledby="titulo-sobre-mi">
-      <h2 id="titulo-sobre-mi">Sobre mí</h2>
+  <main id="contenido">
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="inicio">
+      <div class="container">
+        <h1 class="hero-title">
+          <span class="hero-eyebrow" data-load="1">
+            <span class="dot dot-ok" aria-hidden="true"></span>
+            Richard Palma · Full&nbsp;Stack · Ciudad de México
+          </span>
+          <span class="hero-thesis" data-load="2">
+            Construyo software que llega a <em>producción</em>.
+          </span>
+        </h1>
 
-      <div class="info-grid">
-        <article class="info-card">
-          <span class="card-label">Perfil</span>
-          <p>
-            Hola, soy <strong>Richard Palma</strong>. Tengo experiencia en
-            <strong>Node.js, Angular, C++, C#, HTML, CSS, JavaScript, Python y SQL Server</strong>.
-            He trabajado en la creación de sitios web estáticos y aplicaciones web. Soy amante de los retos y siempre busco una mejora continua
-            a mi trabajo
-          </p>
-        </article>
+        <p class="hero-lede" data-load="3">
+          Desarrollador full stack con proyectos reales funcionando hoy: aplicaciones web,
+          APIs, bases de datos y pagos en línea. Trabajo con Node.js, Angular, C#/.NET,
+          SQL Server y Azure — y sigo aprendiendo en cada entrega.
+        </p>
 
-        <article class="info-card">
-          <span class="card-label">Datos</span>
-          <ul class="clean-list">
-            <li><strong>Edad:</strong> 21 años</li>
-            <li><strong>Cumpleaños:</strong> 27/04</li>
-            <li><strong>Ubicación:</strong> Ciudad de México</li>
-            <li><strong>Enfoque:</strong> Desarrollo fullstack web</li>
-          </ul>
-        </article>
+        <!-- Firma visual: línea de estado tipo terminal con datos reales -->
+        <div class="statusline" data-load="4" aria-label="Resumen del perfil">
+          <span class="statusline-prompt" aria-hidden="true">$</span>
+          <span class="statusline-text" id="statusline-text">status --producción → toursmaran.com.mx · 200 OK</span>
+          <span class="statusline-cursor" aria-hidden="true"></span>
+        </div>
 
-        <article class="info-card full">
-          <span class="card-label">Educación</span>
-          <ul class="timeline">
-            <li>
-              <strong>CECyT 13 "Ricardo Flores Magón"</strong><br />
-              Técnico en Informática (2020 - 2023)
-            </li>
-            <li>
-              <strong>ESIME Culhuacán - IPN</strong><br />
-              Ingeniería en Computación (2023 - Actualidad)
-            </li>
-          </ul>
-        </article>
-
-        <article class="info-card full">
-          <span class="card-label">Tecnologías</span>
-          <div class="skills-grid">
-            <span>C</span>
-            <span>C++</span>
-            <span>C#</span>
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-            <span>Python</span>
-            <span>SQL Server</span>
-            <span>Node.js</span>
-            <span>Angular 16</span>
-            <span>POO</span>
-            <span>ASP.NET MVC</span>
-            <span>ASP.NET Core MVC</span>
-            <span>Azure Web Services</span>
-            <span>Stripe & Stripe Connect</span>
-          </div>
-        </article>
+        <div class="hero-actions" data-load="5">
+          <a class="btn btn-primary" href="#proyectos">Ver proyectos</a>
+          <a class="btn btn-ghost" href="#contacto">Contáctame</a>
+          <a class="link-mono" href="https://github.com/Monkeydrich" target="_blank" rel="noopener noreferrer">
+            github <span aria-hidden="true">↗</span>
+          </a>
+        </div>
       </div>
     </section>
 
-    <section id="proyectos" class="content-section" aria-labelledby="titulo-proyectos">
-      <h2 id="titulo-proyectos">Proyectos</h2>
+    <!-- ================= SOBRE MÍ ================= -->
+    <section class="section" id="sobre-mi" aria-labelledby="titulo-sobre-mi">
+      <div class="container">
+        <p class="eyebrow" data-reveal><span aria-hidden="true">//</span> sobre mí</p>
+        <h2 class="section-title" id="titulo-sobre-mi" data-reveal>
+          Menos promesas,<br />más sistemas funcionando.
+        </h2>
 
-      <div class="proyectos-grid">
-        <article class="proyecto">
-          <div class="project-top">
-            <span class="project-tag">Proyecto profesional / Web</span>
-            <h3>Tours Maran</h3>
+        <div class="about-grid">
+          <div class="about-bio" data-reveal>
+            <p>
+              Soy <strong>Richard Palma</strong>. Empecé como técnico en informática y hoy estudio
+              Ingeniería en Computación en el IPN mientras desarrollo software profesional:
+              he construido desde sitios estáticos hasta plataformas con registro de usuarios,
+              pagos con Stripe y despliegue en Azure.
+            </p>
+            <p>
+              Me gusta entender el problema completo — la interfaz, la API, la base de datos y
+              el servidor — y soy de los que no sueltan un bug hasta resolverlo. Busco un equipo
+              donde pueda aportar desde el día uno y seguir subiendo el nivel.
+            </p>
           </div>
-          <p>
-            Aplicación web profesional para agencia de viajes, enfocado en presencia digital,
-            presentación de servicios y experiencia de usuario.
-          </p>
-          <p>
-            <strong>Mi participación:</strong> desarrollo de la aplicación, estructura de páginas,
-            interfaz visual, adaptación de contenido y mejora de la experiencia del usuario.
-          </p>
-          <p>
-            <strong>Tecnologías:</strong> HTML, CSS, JavaScript, C#, ASP.NET MVC, SQL Server y Azure.
-          </p>
-          <p>
-            <strong>Código:</strong> Privado.
-          </p>
-          <a href="https://toursmaran.com.mx" target="_blank" rel="noopener noreferrer">
-            Ver sitio activo
-          </a>
-        </article>
 
-        <article class="proyecto">
-          <div class="project-top">
-            <span class="project-tag">Proyecto profesional / Plataforma web</span>
-            <h3>Resultados Precisos</h3>
-          </div>
-          <p>
-            Plataforma web orientada a la gestión de eventos deportivos, inscripciones,
-            administración de participantes y operación general del sistema.
-          </p>
-          <p>
-            <strong>Mi participación:</strong> desarrollo de módulos clave del sistema,
-            estructura de base de datos, vistas administrativas, lógica de negocio,
-            flujos de registro y despliegue de funcionalidades web.
-          </p>
-          <p>
-            <strong>Tecnologías:</strong> ASP.NET Core MVC, C#, SQL Server, HTML, CSS,
-            JavaScript, Azure y Stripe.
-          </p>
-          <p>
-            <strong>Código:</strong> Privado.
-          </p>
-          <p>
-            Mi desarrollo de <strong>resultadosprecisos.com</strong> no está disponible, actualmente se maneja otra versión desarrollada.
-          </p>
-        </article>
-
-        <article class="proyecto">
-          <div class="project-top">
-            <span class="project-tag">HTML / CSS / JS</span>
-            <h3>Portafolio web personal</h3>
-          </div>
-          <p>
-            Sitio personal enfocado en presentar perfil, habilidades, proyectos y medios de contacto.
-          </p>
-          <p>
-            <strong>Mi participación:</strong> diseño y desarrollo de la interfaz, estructura visual
-            y organización del contenido del portafolio.
-          </p>
-          <p>
-            <strong>Tecnologías:</strong> HTML, CSS y JavaScript.
-          </p>
-          <a href="https://github.com/Monkeydrich/Portafolio-Richard" target="_blank" rel="noopener noreferrer">
-            Ver en GitHub
-          </a>
-        </article>
-
-        <article class="proyecto">
-          <div class="project-top">
-            <span class="project-tag">HTML / CSS / JS</span>
-            <h3>Demo para Coctaay</h3>
-          </div>
-          <p>
-            Sitio estático publicitario para jelly shots de la marca Coctaay
-          </p>
-          <p>
-            <strong>Mi participación:</strong> diseño y desarrollo de la interfaz, estructura visual
-            y organización del contenido del sitio
-          </p>
-          <p>
-            <strong>Tecnologías:</strong> HTML, CSS y JavaScript.
-          </p>
-          <a href="https://monkeydrich.github.io/DemoCoctaay/" target="_blank" rel="noopener noreferrer">
-            Ver sitio
-          </a>
-        </article>
-        
-        <article class="proyecto">
-          <div class="project-top">
-            <span class="project-tag">C++ / POO</span>
-            <h3>Agencia de viajes</h3>
-          </div>
-          <p>
-            Proyecto escolar orientado a objetos en C++ para modelar una agencia de viajes y sus operaciones.
-          </p>
-          <p>
-            <strong>Mi participación:</strong> desarrollo de lógica orientada a objetos,
-            estructura del sistema y organización de entidades del proyecto.
-          </p>
-          <p>
-            <strong>Tecnologías:</strong> C++ y Programación Orientada a Objetos.
-          </p>
-          <a href="https://github.com/Monkeydrich/Agencia-de-viajes-POO-" target="_blank" rel="noopener noreferrer">
-            Ver en GitHub
-          </a>
-        </article>
-
-        <article class="proyecto">
-          <div class="project-top">
-            <span class="project-tag">C# / MVC / SQL Server</span>
-            <h3>Aplicación web CRUD</h3>
-          </div>
-          <p>
-            Maqueta de sistema web para gestión de productos con operaciones CRUD y base de datos.
-          </p>
-          <p>
-            <strong>Mi participación:</strong> desarrollo de la maqueta, estructura MVC,
-            pantallas principales y conexión con base de datos.
-          </p>
-          <p>
-            <strong>Tecnologías:</strong> C#, ASP.NET MVC y SQL Server.
-          </p>
-          <a href="https://github.com/Monkeydrich/Maqueta-de-p-gina-web" target="_blank" rel="noopener noreferrer">
-            Ver en GitHub
-          </a>
-        </article>
-
-        <article class="proyecto">
-        <div class="project-top">
-          <span class="project-tag">HTML / CSS / JS </span>
-          <h3>Nails Convención</h3>
+          <!-- Ficha técnica en formato clave: valor -->
+          <dl class="datasheet" data-reveal aria-label="Ficha técnica">
+            <div class="datasheet-row">
+              <dt>ubicación</dt>
+              <dd>Ciudad de México</dd>
+            </div>
+            <div class="datasheet-row">
+              <dt>enfoque</dt>
+              <dd>Desarrollo full stack web</dd>
+            </div>
+            <div class="datasheet-row">
+              <dt>proyectos</dt>
+              <dd>7 publicados · 2 profesionales</dd>
+            </div>
+            <div class="datasheet-row">
+              <dt>formación</dt>
+              <dd>6 años en tecnología (2020 → hoy)</dd>
+            </div>
+            <div class="datasheet-row">
+              <dt>estado</dt>
+              <dd><span class="dot dot-ok" aria-hidden="true"></span>Disponible para oportunidades</dd>
+            </div>
+          </dl>
         </div>
-        <p>
-          Proyecto desarrollado para una exposición para la Escuela Superior de Turismo del Instituto Politécnico Nacional
-        </p>
-        <p>
-           <strong>Mi participación:</strong> desarrollo de toda la landing page, estructuración de datos relevantes, SEO,
-          maquetación y responsividad en móviles
-        </p>
-        <p>
-          <strong>Tecnologías:</strong> HTML, CSS y JavaScript.
-        </p>
-        <a href="https://monkeydrich.github.io/Nails-Convencion/" target="_blank" rel="noopener noreferrer">
-          Ver sitio web
-        </a>
-      </article>
-        
+
+        <!-- Educación: aquí sí hay secuencia real, por eso lleva línea de tiempo -->
+        <div class="edu" data-reveal>
+          <h3 class="edu-title">Formación</h3>
+          <ol class="timeline">
+            <li class="timeline-item">
+              <span class="timeline-years">2023 — actualidad</span>
+              <span class="timeline-place">ESIME Culhuacán · Instituto Politécnico Nacional</span>
+              <span class="timeline-degree">Ingeniería en Computación</span>
+            </li>
+            <li class="timeline-item">
+              <span class="timeline-years">2020 — 2023</span>
+              <span class="timeline-place">CECyT 13 "Ricardo Flores Magón"</span>
+              <span class="timeline-degree">Técnico en Informática</span>
+            </li>
+          </ol>
+        </div>
       </div>
-
-      
-
-      <article class="info-card full project-note">
-        <span class="card-label">Nota</span>
-        <p>
-          Algunos proyectos mostrados corresponden a desarrollos reales implementados para empresas,
-          por lo que su código fuente no es público. Se presentan como evidencia de experiencia profesional,
-          mostrando el tipo de sistema, mi participación directa y las tecnologías utilizadas.
-        </p>
-      </article>
     </section>
 
-    <section id="contacto" class="content-section" aria-labelledby="titulo-contacto">
-      <h2 id="titulo-contacto">Contacto</h2>
+    <!-- ================= TECNOLOGÍAS ================= -->
+    <section class="section" id="tecnologias" aria-labelledby="titulo-tecnologias">
+      <div class="container">
+        <p class="eyebrow" data-reveal><span aria-hidden="true">//</span> tecnologías</p>
+        <h2 class="section-title" id="titulo-tecnologias" data-reveal>Stack por capas</h2>
+        <p class="section-lede" data-reveal>
+          Organizado como trabajo: de la interfaz hasta la base de datos y la nube.
+        </p>
 
-      <div class="contacto-wrapper">
-        <div class="contacto-foto">
-          <img src="foto-rich.jpg" alt="Foto de Richard Palma" />
+        <div class="stack-grid">
+          <article class="stack-group" data-reveal>
+            <h3 class="stack-label">frontend/</h3>
+            <ul class="chips">
+              <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Angular 16</li>
+            </ul>
+          </article>
+
+          <article class="stack-group" data-reveal>
+            <h3 class="stack-label">backend/</h3>
+            <ul class="chips">
+              <li>Node.js</li><li>C#</li><li>ASP.NET MVC</li><li>ASP.NET Core MVC</li><li>Python</li>
+            </ul>
+          </article>
+
+          <article class="stack-group" data-reveal>
+            <h3 class="stack-label">datos-y-nube/</h3>
+            <ul class="chips">
+              <li>SQL Server</li><li>Azure Web Services</li><li>Stripe &amp; Stripe Connect</li>
+            </ul>
+          </article>
+
+          <article class="stack-group" data-reveal>
+            <h3 class="stack-label">fundamentos/</h3>
+            <ul class="chips">
+              <li>C</li><li>C++</li><li>POO</li><li>Patrón MVC</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROYECTOS ================= -->
+    <section class="section" id="proyectos" aria-labelledby="titulo-proyectos">
+      <div class="container">
+        <p class="eyebrow" data-reveal><span aria-hidden="true">//</span> proyectos</p>
+        <h2 class="section-title" id="titulo-proyectos" data-reveal>Trabajo seleccionado</h2>
+
+        <!-- Filtros -->
+        <div class="filters" data-reveal role="group" aria-label="Filtrar proyectos">
+          <button class="filter-btn" type="button" data-filter="todos" aria-pressed="true">Todos</button>
+          <button class="filter-btn" type="button" data-filter="profesional" aria-pressed="false">Profesionales</button>
+          <button class="filter-btn" type="button" data-filter="personal" aria-pressed="false">Personales</button>
+          <button class="filter-btn" type="button" data-filter="escolar" aria-pressed="false">Escolares</button>
         </div>
 
-        <div class="contacto-info">
-          <div class="contact-card">
-            <span class="card-label">Correo</span>
-            <p>
-              <a href="mailto:richardpalma102005@gmail.com">richardpalma102005@gmail.com</a>
-            </p>
-          </div>
+        <div class="projects-grid" id="projects-grid">
 
-          <div class="contact-card">
-            <span class="card-label">Teléfono</span>
-            <p>
-              <a href="tel:+525572368152">+52 55 7236 8152</a>
-            </p>
-          </div>
+          <!-- ===== Destacado 1 ===== -->
+          <article class="project project-featured" data-category="profesional" data-reveal>
+            <div class="project-main">
+              <p class="project-kicker">Proyecto profesional · Web</p>
+              <h3 class="project-name">Tours Maran</h3>
+              <p class="project-desc">
+                Aplicación web para una agencia de viajes: presencia digital, presentación de
+                servicios y una experiencia de usuario pensada para convertir visitas en clientes.
+              </p>
+              <p class="project-role">
+                <strong>Mi rol:</strong> desarrollo de la aplicación, estructura de páginas,
+                interfaz visual, adaptación de contenido y mejora de la experiencia del usuario.
+              </p>
+            </div>
+            <dl class="project-meta">
+              <div><dt>estado</dt><dd><span class="dot dot-ok" aria-hidden="true"></span>En producción</dd></div>
+              <div><dt>stack</dt><dd>C# · ASP.NET MVC · SQL Server · Azure · HTML · CSS · JS</dd></div>
+              <div><dt>código</dt><dd>Privado (cliente)</dd></div>
+              <div>
+                <dt>enlace</dt>
+                <dd><a class="project-link" href="https://toursmaran.com.mx" target="_blank" rel="noopener noreferrer">toursmaran.com.mx <span aria-hidden="true">↗</span></a></dd>
+              </div>
+            </dl>
+          </article>
 
-          <div class="contact-card">
-            <span class="card-label">GitHub</span>
-            <p>
-              <a href="https://github.com/Monkeydrich" target="_blank" rel="noopener noreferrer">
-                github.com/Monkeydrich
-              </a>
+          <!-- ===== Destacado 2 ===== -->
+          <article class="project project-featured" data-category="profesional" data-reveal>
+            <div class="project-main">
+              <p class="project-kicker">Proyecto profesional · Plataforma web</p>
+              <h3 class="project-name">Resultados Precisos</h3>
+              <p class="project-desc">
+                Plataforma para la gestión de eventos deportivos: inscripciones, administración
+                de participantes, cobros en línea y operación general del sistema.
+              </p>
+              <p class="project-role">
+                <strong>Mi rol:</strong> módulos clave del sistema, diseño de la base de datos,
+                vistas administrativas, lógica de negocio, flujos de registro y despliegue.
+              </p>
+            </div>
+            <dl class="project-meta">
+              <div><dt>estado</dt><dd>Entregado · el sitio actual es otra versión</dd></div>
+              <div><dt>stack</dt><dd>ASP.NET Core MVC · C# · SQL Server · Azure · Stripe</dd></div>
+              <div><dt>código</dt><dd>Privado (cliente)</dd></div>
+            </dl>
+          </article>
+
+          <!-- ===== Grid normal ===== -->
+          <article class="project" data-category="personal" data-reveal>
+            <p class="project-kicker">HTML · CSS · JS</p>
+            <h3 class="project-name">Nails Convención</h3>
+            <p class="project-desc">
+              Landing page para una exposición de la Escuela Superior de Turismo del IPN:
+              estructura de la información, SEO, maquetación y diseño responsivo.
             </p>
+            <div class="project-foot">
+              <span class="project-status"><span class="dot dot-ok" aria-hidden="true"></span>En línea</span>
+              <a class="project-link" href="https://monkeydrich.github.io/Nails-Convencion/" target="_blank" rel="noopener noreferrer">Ver sitio <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+
+          <article class="project" data-category="personal" data-reveal>
+            <p class="project-kicker">HTML · CSS · JS</p>
+            <h3 class="project-name">Demo para Coctaay</h3>
+            <p class="project-desc">
+              Sitio publicitario para los jelly shots de la marca Coctaay: diseño de la
+              interfaz, estructura visual y organización del contenido.
+            </p>
+            <div class="project-foot">
+              <span class="project-status"><span class="dot dot-ok" aria-hidden="true"></span>En línea</span>
+              <a class="project-link" href="https://monkeydrich.github.io/DemoCoctaay/" target="_blank" rel="noopener noreferrer">Ver sitio <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+
+          <article class="project" data-category="personal" data-reveal>
+            <p class="project-kicker">HTML · CSS · JS</p>
+            <h3 class="project-name">Portafolio personal</h3>
+            <p class="project-desc">
+              Este sitio: diseño y desarrollo desde cero, sin frameworks, con enfoque en
+              rendimiento, accesibilidad y una identidad visual propia.
+            </p>
+            <div class="project-foot">
+              <span class="project-status">Código abierto</span>
+              <a class="project-link" href="https://github.com/Monkeydrich/Portafolio-Richard" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+
+          <article class="project" data-category="escolar" data-reveal>
+            <p class="project-kicker">C# · MVC · SQL Server</p>
+            <h3 class="project-name">Aplicación web CRUD</h3>
+            <p class="project-desc">
+              Sistema web para gestión de productos: operaciones CRUD, arquitectura MVC,
+              pantallas principales y conexión con base de datos.
+            </p>
+            <div class="project-foot">
+              <span class="project-status">Código abierto</span>
+              <a class="project-link" href="https://github.com/Monkeydrich/Maqueta-de-p-gina-web" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+
+          <article class="project" data-category="escolar" data-reveal>
+            <p class="project-kicker">C++ · POO</p>
+            <h3 class="project-name">Agencia de viajes (POO)</h3>
+            <p class="project-desc">
+              Proyecto orientado a objetos en C++ para modelar una agencia de viajes:
+              diseño de clases, estructura del sistema y organización de entidades.
+            </p>
+            <div class="project-foot">
+              <span class="project-status">Código abierto</span>
+              <a class="project-link" href="https://github.com/Monkeydrich/Agencia-de-viajes-POO-" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+        </div>
+
+        <p class="projects-note" data-reveal>
+          Algunos proyectos son desarrollos reales para empresas, por lo que su código fuente es
+          privado. Se presentan como evidencia de experiencia profesional: el tipo de sistema,
+          mi participación directa y las tecnologías utilizadas.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= CONTACTO ================= -->
+    <section class="section section-contact" id="contacto" aria-labelledby="titulo-contacto">
+      <div class="container">
+        <p class="eyebrow" data-reveal><span aria-hidden="true">//</span> contacto</p>
+        <h2 class="section-title" id="titulo-contacto" data-reveal>¿Construimos algo?</h2>
+        <p class="section-lede" data-reveal>
+          Estoy abierto a vacantes, proyectos y colaboraciones. Respondo rápido por correo.
+        </p>
+
+        <div class="contact-grid">
+          <figure class="contact-photo" data-reveal>
+            <img src="foto-rich.jpg" alt="Retrato de Richard Palma" loading="lazy" width="480" height="480" />
+          </figure>
+
+          <div class="contact-list" data-reveal>
+            <a class="contact-row" href="mailto:richardpalma102005@gmail.com">
+              <span class="contact-key">correo</span>
+              <span class="contact-value">richardpalma102005@gmail.com</span>
+              <span class="contact-arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="contact-row" href="tel:+525572368152">
+              <span class="contact-key">teléfono</span>
+              <span class="contact-value">+52 55 7236 8152</span>
+              <span class="contact-arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="contact-row" href="https://github.com/Monkeydrich" target="_blank" rel="noopener noreferrer">
+              <span class="contact-key">github</span>
+              <span class="contact-value">github.com/Monkeydrich</span>
+              <span class="contact-arrow" aria-hidden="true">↗</span>
+            </a>
+
+            <a class="btn btn-primary contact-cta" href="mailto:richardpalma102005@gmail.com">
+              Escríbeme un correo
+            </a>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2026 Richard Palma · Portafolio personal</p>
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="anio">2026</span> Richard Palma</p>
+      <p class="footer-note">Hecho a mano con HTML, CSS y JavaScript — sin frameworks.</p>
+      <a class="link-mono" href="#inicio">↑ volver arriba</a>
+    </div>
   </footer>
 
   <script src="script.js"></script>
